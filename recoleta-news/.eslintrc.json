@@ -1,0 +1,16 @@
+{
+  "extends": ["next/core-web-vitals", "next/typescript", "prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
+    "react/react-in-jsx-scope": "off",
+    "multiline-comment-style": ["error", "starred-block"],
+    "spaced-comment": ["error", "always", { "exceptions": ["-"] }],
+    "lines-between-class-members": ["error", "always"],
+    "quote-props": ["error", "as-needed"],
+    "padding-line-between-statements": [
+      "error",
+      { "blankLine": "always", "prev": "*", "next": "return" }
+    ]
+  }
+}

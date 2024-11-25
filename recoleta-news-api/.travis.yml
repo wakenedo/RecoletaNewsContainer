@@ -1,0 +1,16 @@
+dist: focal # Ubuntu 20.04 distribution
+language: node_js
+node_js:
+  - "18" # Use Node.js 18 for compatibility
+
+cache:
+  directories:
+    - node_modules
+
+before_script:
+  - node -v # Log Node.js version
+  - npm -v # Log npm version
+
+script:
+  - npm install  --include=dev # Install dependencies
+  - npm test # Run tests
