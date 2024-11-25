@@ -2,7 +2,7 @@
 FROM node:16
 
 # Set the working directory
-WORKDIR /app
+WORKDIR /recoleta-news-api
 
 # Copy package files and install dependencies
 COPY package.json package-lock.json ./

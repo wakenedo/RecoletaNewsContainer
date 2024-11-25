@@ -3,24 +3,20 @@ version: "3.9"
 services:
   backend:
     build:
-      context: ./backend
+      context: ./recoleta-news-api
       dockerfile: Dockerfile
     ports:
       - "3001:3001"
     volumes:
       - ./backend:/app
-    environment:
-      - NODE_ENV=development
 
   frontend:
     build:
-      context: ./frontend
+      context: ./recoleta-news
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
     volumes:
       - ./frontend:/app
-    environment:
-      - NODE_ENV=development
     depends_on:
       - backend
